@@ -167,9 +167,19 @@ Regex; which is short hand for rational expression is a sequence of characters t
 
 
 ### Back-references
-    
+    Back- references match the same text as previously matche by a capturing group. By putting the opening tag into a backreference, one can re use the name of the tag for the closing tag.
+        Example: <([A-Z][A-Z0-9]*)\b[^>]*>.*?</\1>
+
+        Captures: [A-Z][A-Z0-9]*-----> All of the items in the first set of parenthesis.
 
 ### Look-ahead and Look-behind
+    (?=X) Lookahead- Asserts that what immediately follows the current position in the string X
+
+    (?<=X) Lookbehind- Assets that what immediately precedes the current position in the string is X
+
+    (?!X)  Negative Lookahead- Asserts that waht immediately follows the current position in the string is not X
+
+    (?<!X) Negative Lookbehind- Asserts that what immediately preceds the current position in the string in not X
 
 ## Author
 
