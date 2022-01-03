@@ -6,7 +6,25 @@ Hello, this is tutorial on Regex concepts and syntax. I hope that you find this 
 
 Regex; which is short hand for rational expression is a sequence of characters that specifies a search pattern. It is commonly used to validate string- search algorithms to find, find and replace or for input validations. Ex field that require email address on web page. We will use the following code as an example in this tutorial:
 
-<!-- SNIPPET OF REGEX CODE HERE -->
+Matching a Hex Value - /^#?([a-f0-9]{6}|[a-f0-9]{3})$/
+    ^- beginning of the text
+    #- matches the character # with index 35 literally
+    ?- matches the previous token between zero and one times as many times as possible
+
+1st Capturing Group ([a-f0-9]{6}|[a-f0-9]{3})
+    [a-f0-9]{6} matches the previous token exactly 6 times
+    a-f matches single characters in alphabet to lowercase letters from a-f
+    0-9 matches single number from 0-9
+
+    [a-f0-9]{3}
+
+    {3} matches the previous token exactly 3 times
+    a-f matches a single character in alphabet to lowercase from a-f
+    0-9 marches a single number from 0-9
+
+    $- assets position at the end of a line
+
+
 
 ## Table of Contents
 
